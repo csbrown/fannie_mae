@@ -19,7 +19,7 @@ if __name__ == "__main__":
         response = session.get("https://loanperformancedata.fanniemae.com/lppub/publish", params=data, stream=True, allow_redirects=False)
         length = int(response.headers.get('content-length',None))
         if response.ok:
-            with open("data/"+fn,"wb") as f:
+            with open("performance_data/"+fn,"wb") as f:
                 total = 0
                 CHUNK_SIZE = 1024
                 for chunk in response.iter_content(chunk_size=CHUNK_SIZE):

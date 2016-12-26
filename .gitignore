@@ -1,2 +1,3 @@
 *.pyc
-data/*
+performance_data/*
+acquisition_data/*
